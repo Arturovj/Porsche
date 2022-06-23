@@ -14,3 +14,18 @@ a {
 * {
   box-sizing: border-box;
 }
+
+
+.letter {
+  margin-left: 20px;
+  filter: invert(1);
+}
+
+.canvas {
+ min-height: 500px;
+}
+
+.canvas-container {
+  min-height: 500px;
+ }
+ 

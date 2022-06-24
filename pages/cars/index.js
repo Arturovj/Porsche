@@ -7,8 +7,11 @@ import Layout from "../../components/Layout";
 import ProductItem from "../../components/ProductItem";
 // import styles from "../styles/Home.module.css";
 import client from "../../utils/client";
+import useStyles from "../../utils/styles";
 
 export default function Cars() {
+
+    const classes = useStyles();
 
 const [state, setState] = useState({
   products: [],
@@ -42,7 +45,7 @@ const { loading, error, products } = state;
         ) : error? (
         <Alert variant="danger">{error}</Alert>
         ) : (
-        <Grid className="cars-container" container spacing={3}>
+        <Grid mt={5} className="cars-containers" container spacing={3}>
           {products.map((product) => (
             <Grid item md={4} key={product.slug}>
               <ProductItem product={product} />

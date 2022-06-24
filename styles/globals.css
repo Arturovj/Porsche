@@ -29,3 +29,24 @@ a {
   min-height: 500px;
  }
  
+.box-cart{
+
+}
+
+.image-properties{
+  border-radius: 20px;
+  height: 300px;
+}
+
+.cars-container{
+  margin-top: 50px;
+}
+
+.loading{
+  position:fixed;
+  left: 50%;
+  top: 50%;
+  height: 100px;
+  width: 100px;
+  transform: translate(-50%, -50%);
+}

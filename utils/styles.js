@@ -1,6 +1,11 @@
 import { makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles({
+
+  section:{
+    marginTop:25,
+    marginBottom:1,
+  },
   navbar: {
     backgroundColor: "#000000",
     "& a": {

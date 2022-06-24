@@ -25,20 +25,27 @@ export default function Layout({ children }) {
           </NextLink>
           <NextLink href="/" passHref>
             <a>
-          <div className="letter">
-            <Image src={letters} width={250} height={25} alt="Porsche Logo" />
-          
-          </div>
-          </a>
+              <div className="letter">
+                <Image
+                  src={letters}
+                  width={250}
+                  height={25}
+                  alt="Porsche Logo"
+                />
+              </div>
+            </a>
           </NextLink>
-          <Typography className={classes.title}>PORSCHE</Typography>
+          <NextLink href="/cars" passHref>
+            <a>
+              <Typography className={classes.title}>Cars</Typography>
+            </a>
+          </NextLink>
         </Toolbar>
       </AppBar>
       <Container pt={14}>{children}</Container>
 
-        <Box>
-            <Typography>COCHES</Typography>
-        </Box>
+      <Box>
+      </Box>
       {/* <footer className={classes.footer}>
             <Typography>All rights reserved. Next Porsche</Typography>
         </footer> */}

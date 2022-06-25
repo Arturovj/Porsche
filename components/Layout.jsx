@@ -40,6 +40,70 @@ export default function Layout({ children }) {
               <Typography className={classes.title}>Cars</Typography>
             </a>
           </NextLink>
+          <NextLink href="/about" passHref>
+            <a>
+              <Typography className={classes.title}>About</Typography>
+            </a>
+          </NextLink>
+          <NextLink href="/contact" passHref>
+            <a>
+              <Typography className={classes.title}>Contact</Typography>
+            </a>
+          </NextLink>
+          <NextLink href="/cars" passHref>
+            <a>
+              <Typography className={classes.title}></Typography>
+            </a>
+          </NextLink>
+          <NextLink href="/cars" passHref>
+            <a>
+              <Typography className={classes.title}></Typography>
+            </a>
+          </NextLink>
+          <NextLink href="/cars" passHref>
+            <a>
+              <Typography className={classes.title}></Typography>
+            </a>
+          </NextLink>
+          <NextLink href="/cars" passHref>
+            <a>
+              <Typography className={classes.title}></Typography>
+            </a>
+          </NextLink>
+          <NextLink href="/cars" passHref>
+            <a>
+              <Typography className={classes.title}></Typography>
+            </a>
+          </NextLink>
+          <NextLink href="/cars" passHref>
+            <a>
+              <Typography className={classes.title}></Typography>
+            </a>
+          </NextLink>
+          <NextLink href="/cars" passHref>
+            <a>
+              <Typography className={classes.title}></Typography>
+            </a>
+          </NextLink>
+          <NextLink href="/cars" passHref>
+            <a>
+              <Typography className={classes.title}></Typography>
+            </a>
+          </NextLink><NextLink href="/cars" passHref>
+            <a>
+              <Typography className={classes.title}></Typography>
+            </a>
+          </NextLink>
+          <NextLink href="/cars" passHref>
+            <a>
+              <Typography className={classes.title}></Typography>
+            </a>
+          </NextLink>
+          <NextLink href="/cars" passHref>
+            <a>
+              <Typography className={classes.title}>Cart</Typography>
+            </a>
+          </NextLink>
         </Toolbar>
       </AppBar>
       <Container pt={14}>{children}</Container>

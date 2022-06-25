@@ -16,15 +16,18 @@ import NextLink from "next/link";
 import { useEffect, useState, useContext } from "react";
 import Layout from "../../components/Layout";
 import client from "../../utils/client";
-import { urlFor } from "../../utils/image";
+import { urlFor, urlForThumbnail } from "../../utils/image";
 import { Store } from "../../utils/Store";
 import useStyles from "../../utils/styles";
 import axios from "axios";
 import { useSnackbar } from "notistack";
+import { useRouter } from "next/router";
+
 
 
 export default function ProductScreen(props) {
   const classes = useStyles();
+  const router = useRouter();
   const { slug } = props;
   const {
     state: { cart },
@@ -56,23 +59,26 @@ export default function ProductScreen(props) {
   }, []);
 
   const addToCartHandler = async () => {
-    const existItem = cart.cartItems.find((x) => x_id === product._id);
+    const existItem = cart.cartItems.find((x) => x._id === product._id);
     const quantity = existItem ? existItem.quantity + 1 : 1;
     const { data } = await axios.get(`/api/cars/${product._id}`);
     if(data.counInStock < quantity) {
         enqueueSnackbar("Not enought items in stock", { variant: "error" });
     }
-    dispatch({type: 'CART_ADD_ITEM', payload: {
+      dispatch({
+      type: 'CART_ADD_ITEM',
+      payload: {
         _key: product._id,
         name: product.name,
-        countInStock:product.countInStock,
+        countInStock: product.countInStock,
         slug: product.slug.current,
         price: product.price,
-        image: product.image,
+        image: urlForThumbnail(product.image),
         quantity,
-
-    }});
+      },
+});
     enqueueSnackbar(`${product.name} added to the cart`, { variant: "success" });
+    router.push("/cart");
   };
 
   return (

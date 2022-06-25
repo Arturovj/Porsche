@@ -18,7 +18,7 @@ export default function Layout({ children }) {
       <Head>
         <title>PORSCHE</title>
       </Head>
-      <AppBar position="static" className={classes.navbar}>
+    
         <Navbar/>
         {/* <Toolbar>
           <NextLink href="/" passHref>
@@ -60,7 +60,7 @@ export default function Layout({ children }) {
             </a>
           </NextLink>
         </Toolbar> */}
-      </AppBar>
+     
       <Container pt={14}>{children}</Container>
 
       <Box>

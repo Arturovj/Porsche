@@ -10,8 +10,8 @@ import Porsche from "../components/Porsche";
 
 export default function PorscheCanvas() {
   return (
-    <div className="canvas-container" >
-    <Wrapper className="canvas-container">
+    <div className="" >
+    <Wrapper className="">
       <Canvas clasName="canvas">
         <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={1.5} />
         <ambientLight intensity={6} />
@@ -32,5 +32,6 @@ const Wrapper = styled.div`
  
   canvas {
     min-height: 500px;
+    height: 500px;
   }
 `;

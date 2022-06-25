@@ -33,7 +33,7 @@ const { loading, error, products } = state;
   console.log(products)
   return (
     <Layout>
-      <div>
+      <div className="canvas-container">
         <PorscheCanvas/>
       </div>
       <div>

@@ -1,5 +1,4 @@
 import Document, { Head, Html, Main, NextScript } from 'next/document';
-import { ServerStyleSheets } from '@material-ui/core/styles';
 import createEmotionServer from '@emotion/server/create-instance';
 import React from 'react';
 import createCache from '@emotion/cache';

@@ -24,8 +24,10 @@ import { useSnackbar } from "notistack";
 import { useContext } from "react";
 import Layout from "../components/Layout";
 import { Store } from "../utils/Store";
+import { useRouter } from 'next/router';
 
 function CartScreen() {
+  const router = useRouter();
   const {
     state: {
       cart: { cartItems },
@@ -157,13 +159,17 @@ function CartScreen() {
                   </Typography>
                 </ListItem>
                 <ListItem>
-                  <Button
+                <Button
+                    onClick={() => {
+                      router.push('/shipping');
+                    }}
                     fullWidth
                     style={{
                       borderRadius: 5,
                       backgroundColor: "#C29049",
                       fontSize: "px",
                     }}
+                    
                     variant="contained"
                   >
                     Checkout

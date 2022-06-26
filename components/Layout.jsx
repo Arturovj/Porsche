@@ -13,7 +13,7 @@ export default function Layout({ children }) {
   return (
     <div>
       <Head>
-        <title>PORSCHE</title>
+        <title>PORSCHE by Arturo Vivar</title>
       </Head>
     
         <Navbar/>

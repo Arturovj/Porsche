@@ -27,6 +27,9 @@ const useStyles = makeStyles({
   },
   mark:{
     marginLeft: 50,
+  },
+  fullWidth:{
+    width: "100%",
   }
 });
 

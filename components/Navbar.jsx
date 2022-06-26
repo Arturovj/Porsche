@@ -3,12 +3,44 @@ import Image from "next/image";
 import NextLink from "next/link";
 import { Store } from "../utils/Store";
 import Link from "next/link";
-import { Badge, Typography } from "@mui/material";
-import { useContext } from "react";
+import { Badge, Typography, Button, Menu, MenuItem, Box } from "@mui/material";
+import { useContext, useState } from 'react';
+import { useRouter } from 'next/router';
+import jsCookie from 'js-cookie';
+
 
 const Navbar = () => {
+  const router = useRouter();
   const { state, dispatch } = useContext(Store);
   const { cart, userInfo } = state;
+
+
+  const [anchorEl, setAnchorEl] = useState(null);
+  
+  const loginMenuCloseHandler = (e, redirect, reason) => {
+    setAnchorEl(null);
+    if (redirect) {
+      router.push(redirect);
+    }
+    if (reason && reason == "backdropClick") 
+        return;
+    myCloseModal();
+  };
+  const loginClickHandler = (e) => {
+    setAnchorEl(e.currentTarget);
+  };
+  const logoutClickHandler = () => {
+    setAnchorEl(null);
+    dispatch({ type: 'USER_LOGOUT' });
+    jsCookie.remove('userInfo');
+    jsCookie.remove('cartItems');
+    router.push('/');
+  };
+
+
+
+
+
   return (
     <div className={styles.container}>
       <div className={styles.item}>
@@ -61,13 +93,45 @@ const Navbar = () => {
             </Link>
           </NextLink>
           {userInfo? (
-             <NextLink href="/profile" passHref>
-             <Link>
-             <a>
-               <div className={styles.counter}>{userInfo.name}</div>
-               </a>
-             </Link>
-           </NextLink>
+            <>
+            <Box ml={5}>
+            <Button
+              aria-controls="simple-menu"
+              aria-haspopup="true"
+              onClick={loginClickHandler}
+              variant="contained"
+              style={{
+                borderRadius: 5,
+                backgroundColor: "#C29049",
+                fontSize: "px",
+              }}
+              
+            >
+
+              {userInfo.name}
+            </Button>
+            </Box>
+            <Menu
+              id="simple-menu"
+              anchorEl={anchorEl}
+              keepMounted
+              open={Boolean(anchorEl)}
+              onClose={(_, reason) => {
+                if (reason !== "backdropClick") {
+                  loginMenuCloseHandler();
+                }
+              }}
+            
+              
+            >
+              <MenuItem
+                onClick={(e) => loginMenuCloseHandler(e, '/profile')}
+              >
+                Profile
+              </MenuItem>
+              <MenuItem onClick={logoutClickHandler}>Logout</MenuItem>
+            </Menu>
+          </>
 
           ) : ( <NextLink href="/login" passHref>
              <Link>

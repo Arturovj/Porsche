@@ -71,6 +71,14 @@
     font-weight: 500;
 }
 
+.navbarButton{
+    color: white;
+    text-transform: 'initial';
+    margin-left: 50px;
+}
+
+
+
 
 @media screen and (max-width:480px) {
     .item:nth-child(2){

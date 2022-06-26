@@ -21,7 +21,7 @@ import dynamic from "next/dynamic";
 import Image from "next/image";
 import NextLink from "next/link";
 import { useSnackbar } from "notistack";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import Layout from "../components/Layout";
 import { Store } from "../utils/Store";
 import { useRouter } from 'next/router';
@@ -32,10 +32,24 @@ function CartScreen() {
   const {
     state: {
       cart: { cartItems },
+      userInfo
     },
     dispatch,
   } = useContext(Store);
 
+  function user() {
+    if (!userInfo) {
+      return router.push('/login?redirect=/cart');
+    }
+  }
+
+  useEffect(() => {
+    user();
+    return () => {
+      console.log('This will be logged on unmount');
+    };
+  });
+  
   const { enqueueSnackbar } = useSnackbar();
 
   const updateCartHandler = async (item, quantity) => {

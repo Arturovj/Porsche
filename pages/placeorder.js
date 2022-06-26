@@ -49,9 +49,9 @@ import {
       if (!paymentMethod) {
         router.push('/payment');
       }
-      if (cartItems.length === 0) {
-        router.push('/cart');
-      }
+    //   if (cartItems.length === 0) {
+    //     router.push('/cart');
+    //   }
     }, [cartItems, paymentMethod, router]);
   
     const placeOrderHandler = async () => {
@@ -161,7 +161,7 @@ import {
                         {cartItems.map((item) => (
                           <TableRow key={item._key}>
                             <TableCell>
-                              <NextLink href={`/product/${item.slug}`} passHref>
+                              <NextLink href={`/cars/${item.slug}`} passHref>
                                 <Link>
                                   <Image
                                     src={item.image}
@@ -173,7 +173,7 @@ import {
                               </NextLink>
                             </TableCell>
                             <TableCell>
-                              <NextLink href={`/product/${item.slug}`} passHref>
+                              <NextLink href={`/cars/${item.slug}`} passHref>
                                 <Link>
                                   <Typography>{item.name}</Typography>
                                 </Link>

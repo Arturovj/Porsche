@@ -1,17 +1,16 @@
-import { Alert, CircularProgress, Grid, Typography } from "@mui/material";
-import Head from "next/head";
-import Image from "next/image";
+import { Alert, CircularProgress, Grid} from "@mui/material";
+
 import { useEffect, useState } from "react";
-import PorscheCanvas from "../../canvas/canvas";
+
 import Layout from "../../components/Layout";
 import ProductItem from "../../components/ProductItem";
 // import styles from "../styles/Home.module.css";
 import client from "../../utils/client";
-import useStyles from "../../utils/styles";
+
 
 export default function Cars() {
 
-    const classes = useStyles();
+    
 
 const [state, setState] = useState({
   products: [],

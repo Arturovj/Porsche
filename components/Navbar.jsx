@@ -17,14 +17,12 @@ const Navbar = () => {
 
   const [anchorEl, setAnchorEl] = useState(null);
   
-  const loginMenuCloseHandler = (e, redirect, reason) => {
+  const loginMenuCloseHandler = (e, redirect) => {
     setAnchorEl(null);
     if (redirect) {
       router.push(redirect);
     }
-    if (reason && reason == "backdropClick") 
-        return;
-    myCloseModal();
+   
   };
   const loginClickHandler = (e) => {
     setAnchorEl(e.currentTarget);
@@ -35,6 +33,7 @@ const Navbar = () => {
     jsCookie.remove('userInfo');
     jsCookie.remove('cartItems');
     jsCookie.remove('shippingAddress');
+    jsCookie.remove('paymentMethod');
     router.push('/');
   };
 

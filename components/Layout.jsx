@@ -1,17 +1,14 @@
-import { AppBar, Container, Toolbar, Typography } from "@material-ui/core";
+import {  Container } from "@material-ui/core";
 import Head from "next/head";
 import React from "react";
-import useStyles from "../utils/styles";
-import Image from "next/image";
-import logo from "../utils/images/logo.png";
-import letters from "../utils/images/letters1.png";
-import NextLink from "next/link";
+
+
 import { Box } from "@mui/material";
 import Navbar from "../components/Navbar";
 
 
 export default function Layout({ children }) {
-  const classes = useStyles();
+
 
   return (
     <div>

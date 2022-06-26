@@ -21,19 +21,29 @@ import dynamic from "next/dynamic";
 import Image from "next/image";
 import NextLink from "next/link";
 import { useSnackbar } from "notistack";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import Layout from "../components/Layout";
 import { Store } from "../utils/Store";
 import { useRouter } from 'next/router';
 
+
 function CartScreen() {
   const router = useRouter();
+
   const {
     state: {
       cart: { cartItems },
+      userInfo
     },
     dispatch,
   } = useContext(Store);
+
+  useEffect(() => {
+    if (!userInfo) {
+      return router.push('/login');
+    }}, [userInfo, router]);
+
+  
 
   const { enqueueSnackbar } = useSnackbar();
 

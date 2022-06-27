@@ -1,6 +1,6 @@
-
 // import Head from "next/head";
 // import Image from "next/image";
+import { Box } from "@mui/material";
 import { useEffect, useState } from "react";
 import PorscheCanvas from "../canvas/canvas";
 import BannerExample from "../components/Carousel";
@@ -10,35 +10,36 @@ import Layout from "../components/Layout";
 import client from "../utils/client";
 
 export default function Home() {
+  const [state, setState] = useState({
+    products: [],
+    error: "",
+    loading: true,
+  });
 
-const [state, setState] = useState({
-  products: [],
-  error: '',
-  loading: true
-});
-
-const { products } = state;
+  const { products } = state;
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const products = await client.fetch(`*[_type == "product"]`);
-        setState({products, loading: false});
-      } catch(err) {
+        setState({ products, loading: false });
+      } catch (err) {
         setState({ loading: false, error: err.message });
       }
     };
     fetchData();
   }, []);
 
-  console.log(products)
+  console.log(products);
   return (
     <Layout>
       <div className="canvas-container">
-        <PorscheCanvas/>
+        <PorscheCanvas />
       </div>
       <div>
-      <BannerExample/>
+        <Box>
+          <BannerExample />
+        </Box>
       </div>
     </Layout>
   );

@@ -13,7 +13,7 @@ export default function PorscheCanvas() {
     <div className="" >
     <Wrapper className="">
       <Canvas clasName="canvas">
-        <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={1.5} />
+        <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={0.7} />
         <ambientLight intensity={6} />
         <spotLight intensity={9} angle={20} penumbra={0.01} position={[-10,20,-5]} castShadow></spotLight>
         <directionalLight position={[-2, 5, 2]} />

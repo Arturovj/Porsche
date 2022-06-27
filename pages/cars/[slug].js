@@ -90,7 +90,7 @@ export default function ProductScreen(props) {
       ) : error ? (
         <Alert variant="error">{error}</Alert>
       ) : (
-        <Box mb={75} className={classes.section}>
+        <Box  className={classes.section}>
           <Box>
             <NextLink href="/cars" passHref>
               <Link>
@@ -98,6 +98,7 @@ export default function ProductScreen(props) {
               </Link>
             </NextLink>
           </Box>
+          <Box mb={75}>
           <Grid container spacing={1}>
             <Grid className="image-witdh" item md={6} xs={12}>
               <Image
@@ -172,6 +173,7 @@ export default function ProductScreen(props) {
               </Card>
             </Grid>
           </Grid>
+          </Box>
         </Box>
       )}
     </Layout>

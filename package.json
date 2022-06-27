@@ -11,6 +11,8 @@
   "dependencies": {
     "@chakra-ui/icons": "^1.1.7",
     "@chakra-ui/react": "^1.8.8",
+    "react-material-ui-carousel": "2.2.2",
+    "@material-ui/icons": "4.11.2",
     "@emotion/react": "^11.9.3",
     "@emotion/server": "^11.4.0",
     "@emotion/styled": "^11.9.3",

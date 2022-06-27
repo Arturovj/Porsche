@@ -1,10 +1,11 @@
-import { Alert, CircularProgress, Grid } from "@mui/material";
+
 // import Head from "next/head";
 // import Image from "next/image";
 import { useEffect, useState } from "react";
 import PorscheCanvas from "../canvas/canvas";
+import BannerExample from "../components/Carousel";
 import Layout from "../components/Layout";
-import ProductItem from "../components/ProductItem";
+
 // import styles from "../styles/Home.module.css";
 import client from "../utils/client";
 
@@ -16,7 +17,7 @@ const [state, setState] = useState({
   loading: true
 });
 
-const { loading, error, products } = state;
+const { products } = state;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -37,19 +38,7 @@ const { loading, error, products } = state;
         <PorscheCanvas/>
       </div>
       <div>
-        {loading ? (
-        <CircularProgress/>
-        ) : error? (
-        <Alert variant="danger">{error}</Alert>
-        ) : (
-        <Grid container spacing={3}>
-          {products.map((product) => (
-            <Grid item md={4} key={product.slug}>
-              <ProductItem product={product} />
-              </Grid>
-          ))}
-        </Grid>
-     )}
+      <BannerExample/>
       </div>
     </Layout>
   );

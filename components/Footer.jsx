@@ -20,21 +20,8 @@ const Footer = () => {
             <br /> Porscheplatz 9, 70435 Stuttgart, Alemania
             <br />  +49 711 91126220
           </p>
-          <p className={styles.text}>
-          Porsche Zentrum Stuttgart.
-            <br /> Porscheplatz 9, 70435 Stuttgart, Alemania
-            <br />  +49 711 91126220
-          </p>
-          <p className={styles.text}>
-          Porsche Zentrum Stuttgart.
-            <br /> Porscheplatz 9, 70435 Stuttgart, Alemania
-            <br />  +49 711 91126220
-          </p>
-          <p className={styles.text}>
-          Porsche Zentrum Stuttgart.
-            <br /> Porscheplatz 9, 70435 Stuttgart, Alemania
-            <br />  +49 711 91126220
-          </p>
+         
+         
         </div>
         <div className={styles.card}>
           <h1 className={styles.title}>WORKING HOURS</h1>

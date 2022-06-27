@@ -4,6 +4,7 @@ import { Box } from "@mui/material";
 import { useEffect, useState } from "react";
 import PorscheCanvas from "../canvas/canvas";
 import BannerExample from "../components/Carousel";
+
 import Layout from "../components/Layout";
 
 // import styles from "../styles/Home.module.css";
@@ -36,11 +37,12 @@ export default function Home() {
       <div className="canvas-container">
         <PorscheCanvas />
       </div>
-      <div>
+      
         <Box>
           <BannerExample />
         </Box>
-      </div>
+     
+      
     </Layout>
   );
 }

@@ -5,6 +5,7 @@ import React from "react";
 
 import { Box } from "@mui/material";
 import Navbar from "../components/Navbar";
+import Footer from "./Footer";
 
 
 export default function Layout({ children }) {
@@ -60,9 +61,13 @@ export default function Layout({ children }) {
      
       <Container pt={14}>{children}</Container>
 
-      <Box>
+      <Box mt={10}>
+      <div>
+        <Footer/>
+      </div>
 
       </Box>
+     
       {/* <footer className={classes.footer}>
             <Typography>All rights reserved. Next Porsche</Typography>
         </footer> */}

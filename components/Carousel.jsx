@@ -74,11 +74,11 @@ const items = [
     contentPosition: "left",
     Items: [
       {
-        
+        Name: "911 turbo",
         Image: "https://img.remediosdigitales.com/478003/porsche-911-turbo-1994-dos-policias-rebeldes-subasta-01/1366_2000.jpeg"
       },
       {
-        
+        Name: "911",
         Image: "https://cdn.motor1.com/images/mgl/6LVGX/s3/theon-design-hk002-porsche-911.jpg"
       }
     ]
@@ -89,11 +89,11 @@ const items = [
     contentPosition: "middle",
     Items: [
       {
-        
+        Name: "Sport Classic",
         Image: "https://files.porsche.com/filestore/image/multimedia/none/rd-2022-homepage-banner-ww-992sc-kw17/normal/1576ac92-c531-11ec-80ef-005056bbdc38/porsche-normal.jpg"
       },
       {
-        
+        Name: "911 Carrera",
         Image: "https://www.autobild.es/sites/autobild.es/public/styles/main_element/public/dc/fotos/Porsche-911_Carrera_4S-2019-C07_0.jpg?itok=UAkXs5fS"
       }
     ]
@@ -104,11 +104,11 @@ const items = [
     contentPosition: "right",
     Items: [
       {
-       
+        Name: "Classic",
         Image: "https://i.pinimg.com/564x/a5/a0/94/a5a094f97aa1ba73355a0e6210295d88.jpg"
       },
       {
-        
+        Name: "Classic",
         Image: "https://i.pinimg.com/originals/a1/d1/d0/a1d1d07184d98cfc9e7ca88a76f4116a.jpg"
       }
     ]

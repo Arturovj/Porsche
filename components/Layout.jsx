@@ -61,7 +61,7 @@ export default function Layout({ children }) {
      
       <Container pt={14}>{children}</Container>
 
-      <Box mt={10}>
+      <Box mt={20}>
       <div>
         <Footer/>
       </div>

@@ -3,7 +3,7 @@ import React from 'react'
 import NextLink from 'next/link'
 import { urlForThumbnail } from '../utils/image'
 
-export default function ProductItem({ product }) {
+export default function ProductItem({ product, addToCartHandler }) {
   return (
     <Card>
         <NextLink href={`/cars/${product.slug.current}`} passHref>
@@ -27,7 +27,10 @@ export default function ProductItem({ product }) {
             <Typography>
                 {product.price}$
             </Typography>
-            <Button>Add to cart</Button>
+            <Button
+              onClick={() => addToCartHandler(product)}
+            
+            >Add to cart</Button>
         </CardActions>
     </Card>
   )

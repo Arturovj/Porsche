@@ -47,7 +47,7 @@ import {
     };
     return (
       <Layout title="Payment Method">
-        <Box mt={5}>
+        <Box mt={5} mb={75}>
         <CheckoutWizard activeStep={2}></CheckoutWizard>
         <Form onSubmit={submitHandler}>
           <Typography component="h1" variant="h1">

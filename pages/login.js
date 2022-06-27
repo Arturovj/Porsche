@@ -1,4 +1,4 @@
-import { Typography, List, ListItem, TextField, Button, Link } from "@mui/material";
+import { Typography, List, ListItem, TextField, Button, Link, Box} from "@mui/material";
 import React, { useContext, useEffect } from 'react';
 import { useForm, Controller } from "react-hook-form";
 import Form from "../components/Form";
@@ -49,7 +49,8 @@ export default function LoginScreen() {
 
   return (
     <Layout title="Login">
-      <Form onSubmit={handleSubmit(submitHandler)}>
+      <Box mt={10} pb={75}>
+      <Form  onSubmit={handleSubmit(submitHandler)}>
         <Typography component="h1" variant="h5">
           Login
         </Typography>
@@ -125,6 +126,7 @@ export default function LoginScreen() {
           </ListItem>
         </List>
       </Form>
+      </Box>
     </Layout>
   );
 }

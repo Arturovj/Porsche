@@ -15,6 +15,7 @@ import {
   TableHead,
   TableRow,
   Typography,
+
 } from "@mui/material";
 import axios from "axios";
 import dynamic from "next/dynamic";
@@ -25,6 +26,8 @@ import { useContext, useEffect } from "react";
 import Layout from "../components/Layout";
 import { Store } from "../utils/Store";
 import { useRouter } from 'next/router';
+
+
 
 
 function CartScreen() {
@@ -77,9 +80,14 @@ function CartScreen() {
   const removeItemHandler = (item) => {
     dispatch({ type: "CART_REMOVE_ITEM", payload: item });
   };
+
+
+
+
+
   return (
     <Layout title="Shopping Cart">
-      <Typography mt={5} component="h1" variant="h3">
+      <Typography mt={5}  component="h1" variant="h3">
         Shopping Cart
       </Typography>
       {cartItems.length === 0 ? (
@@ -92,7 +100,9 @@ function CartScreen() {
           </Typography>
         </Box>
       ) : (
-        <Grid mt={5} container spacing={1}>
+       
+        <Grid mt={5} mb={75} container spacing={1}>
+            
           <Grid item md={9} xs={12}>
             <TableContainer>
               <Table>

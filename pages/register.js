@@ -11,6 +11,7 @@ import {
   ListItem,
   TextField,
   Typography,
+  Box,
 } from '@mui/material';
 import { useSnackbar } from 'notistack';
 import axios from 'axios';
@@ -59,6 +60,7 @@ export default function RegisterScreen() {
   };
   return (
     <Layout title="Register">
+      <Box mt={10} pb={75}>
       <Form onSubmit={handleSubmit(submitHandler)}>
         <Typography component="h1" variant="h1">
           Register
@@ -181,7 +183,7 @@ export default function RegisterScreen() {
             ></Controller>
           </ListItem>
           <ListItem>
-            <Button variant="contained" type="submit" fullWidth color="primary">
+            <Button variant="contained" type="submit" fullWidth color="warning">
               Register
             </Button>
           </ListItem>
@@ -193,6 +195,7 @@ export default function RegisterScreen() {
           </ListItem>
         </List>
       </Form>
+      </Box>
     </Layout>
   );
 }

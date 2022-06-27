@@ -53,7 +53,7 @@ export default function ShippingScreen() {
   };
   return (
     <Layout title="Shipping Address">
-        <Box mt={5}>
+        <Box mt={5} mb={75}>
       <CheckoutWizard activeStep={1}></CheckoutWizard>
       <Form onSubmit={handleSubmit(submitHandler)}>
         <Typography component="h1" variant="h1">

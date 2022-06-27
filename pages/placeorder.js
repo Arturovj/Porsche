@@ -89,7 +89,7 @@ import {
     };
     return (
       <Layout title="Place Order">
-        <Box mt={5}>
+        <Box mt={5} mb={75}>
         <CheckoutWizard activeStep={3}></CheckoutWizard>
         <Typography component="h2" variant="h2">
           Place Order

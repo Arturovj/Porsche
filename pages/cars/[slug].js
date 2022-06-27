@@ -90,7 +90,7 @@ export default function ProductScreen(props) {
       ) : error ? (
         <Alert variant="error">{error}</Alert>
       ) : (
-        <Box className={classes.section}>
+        <Box mb={75} className={classes.section}>
           <Box>
             <NextLink href="/cars" passHref>
               <Link>

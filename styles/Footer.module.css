@@ -1,7 +1,8 @@
 .container {
-    height: calc(70vh - 100px);
+    height: calc(50vh - 120px);
     background-color: #402306;
     display: flex;
+    max-height: 300px;
   }
   
   .item {

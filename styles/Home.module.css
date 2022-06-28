@@ -1,3 +1,7 @@
 .canvas-container{
   min-height: 500px;
 }
+
+.carouselContaienr {
+  cursor: pointer;
+}

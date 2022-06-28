@@ -1,6 +1,9 @@
 import { useEffect } from 'react'
 import '../styles/globals.css'
 import createCache from '@emotion/cache'
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 import { CacheProvider } from '@emotion/react';
 import { StoreProvider } from '../utils/Store';
 import { SnackbarProvider } from 'notistack';

@@ -97,7 +97,7 @@ export default function Home() {
               <NextLink href="/cars">
                 <Link>
                   <Button variant="outlined" className={styles.ViewButton}>
-                    View Now
+                    718
                   </Button>
                 </Link>
               </NextLink>
@@ -112,7 +112,7 @@ export default function Home() {
               <NextLink href="/cars">
                 <Link>
                   <Button variant="outlined" className={styles.ViewButton}>
-                    View Now
+                    911
                   </Button>
                 </Link>
               </NextLink>
@@ -127,7 +127,7 @@ export default function Home() {
               <NextLink href="/cars">
                 <Link>
                   <Button variant="outlined" className={styles.ViewButton}>
-                    View Now
+                    Panamera
                   </Button>
                 </Link>
               </NextLink>
@@ -142,7 +142,7 @@ export default function Home() {
               <NextLink href="/cars">
                 <Link>
                   <Button variant="outlined" className={styles.ViewButton}>
-                    View Now
+                    Taycan
                   </Button>
                 </Link>
               </NextLink>
@@ -157,7 +157,7 @@ export default function Home() {
               <NextLink href="/cars">
                 <Link>
                   <Button variant="outlined" className={styles.ViewButton}>
-                    View Now
+                   Cayenne
                   </Button>
                 </Link>
               </NextLink>
@@ -172,7 +172,7 @@ export default function Home() {
               <NextLink href="/cars">
                 <Link>
                   <Button variant="outlined" className={styles.ViewButton}>
-                    View Now
+                    Macan
                   </Button>
                 </Link>
               </NextLink>

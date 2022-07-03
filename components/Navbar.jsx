@@ -73,11 +73,19 @@ const Navbar = () => {
                     <div className={styles.text}><p><h5>911</h5></p></div>
                 </div>
                 <div className={styles.row}>
+                <NextLink href="/porsche718" passHref>
+            <a>
                         <Image src="/img/718real.jpg" alt="" width={250} height={200} />
+                      </a>
+                    </NextLink>
                         <div className={styles.text}><h5><p>718</p></h5></div>
                 </div>
                 <div className={styles.row}>
+                <NextLink href="/panamera" passHref>
+            <a>
                         <Image src="/img/panamerareal.jpg" alt="" width={250} height={200} />
+                      </a>
+                    </NextLink>
                         <div className={styles.text}><h5><p>Panamera</p></h5></div>
                 </div>
                 <div className={styles.row}>

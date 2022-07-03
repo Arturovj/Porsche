@@ -57,11 +57,31 @@ const Navbar = () => {
         <ul className={styles.list}>
           <NextLink href="/cars" passHref>
             <a>
-              <li className={styles.listItem}>Cars</li>
+              <li className={styles.listItem}>Shop</li>
             </a>
           </NextLink>
           {/* <Image src="/img/logo.png" alt="" width="160px" height="69px" /> */}
-          <li className={styles.listItem}>Events</li>
+          <li className={styles.listItem}>Cars
+          <div className={styles.megaBox}>
+              <div className={styles.content}>
+                <div className={styles.row}>
+                        <Image src="/img/real911.jpg" alt="" width={250} height={200} />
+                </div>
+                <div className={styles.row}>
+                        <Image src="/img/718real.jpg" alt="" width={250} height={200} />
+                </div>
+                <div className={styles.row}>
+                        <Image src="/img/panamerareal.jpg" alt="" width={250} height={200} />
+                </div>
+                <div className={styles.row}>
+                        <Image src="/img/macanreal.jpg" alt="" width={250} height={200} />
+                </div>
+              </div>
+          </div>
+          </li>
+
+
+
           <li className={styles.listItem}>Blog</li>
           <li className={styles.listItem}>Contact</li>
         </ul>

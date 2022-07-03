@@ -2,6 +2,7 @@ import React from 'react'
 import Layout from '../components/Layout'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import styles from "../styles/Char911.module.css";
 
 const imageAnimate = {
   offscreen: { x:-100, opacity: 0 },
@@ -37,13 +38,19 @@ export default function porsche911() {
        <Image src="/img/911page1.jpg" alt="Porsche 911" width={1280} height={720} />
       </motion.div>
       
-      <div>
+      <div className={styles.char}>
       <motion.p
       initial={'offscreen'}
       whileInView={'onscreen'}
       variants={textAnimate}
       >
       <div><h1>911</h1></div>  
+      <h3>
+
+      <p>Our engineers like to talk about the most perfect sports car in history.<br/>
+         Extremely sporty, comfortable and suitable for everyday wear.<br/>
+          The 911 Turbo models continue down this path.</p>
+      </h3>
       </motion.p>
       <motion.div
       initial={'offscreen'}

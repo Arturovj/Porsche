@@ -27,7 +27,7 @@ export default function porsche911() {
   return (
     <Layout>
       <Box mt={2}>
-      <div>
+      <div className={styles.container911}>
         <motion.div
           initial={"offscreen"}
           whileInView={"onscreen"}

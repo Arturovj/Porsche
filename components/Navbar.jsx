@@ -65,7 +65,11 @@ const Navbar = () => {
           <div className={styles.megaBox}>
               <div className={styles.content}>
                 <div className={styles.row}>
+                <NextLink href="/porsche911" passHref>
+            <a>
                         <Image src="/img/real911.jpg" alt="" width={250} height={200} />
+                      </a>
+                    </NextLink>
                 </div>
                 <div className={styles.row}>
                         <Image src="/img/718real.jpg" alt="" width={250} height={200} />

@@ -70,15 +70,19 @@ const Navbar = () => {
                         <Image src="/img/real911.jpg" alt="" width={250} height={200} />
                       </a>
                     </NextLink>
+                    <div className={styles.text}><p>911</p></div>
                 </div>
                 <div className={styles.row}>
                         <Image src="/img/718real.jpg" alt="" width={250} height={200} />
+                        <div className={styles.text}><p>718</p></div>
                 </div>
                 <div className={styles.row}>
                         <Image src="/img/panamerareal.jpg" alt="" width={250} height={200} />
+                        <div className={styles.text}><p>Panamera</p></div>
                 </div>
                 <div className={styles.row}>
                         <Image src="/img/macanreal.jpg" alt="" width={250} height={200} />
+                        <div className={styles.text}><p>Macan</p></div>
                 </div>
               </div>
           </div>

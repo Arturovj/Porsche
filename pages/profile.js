@@ -1,4 +1,4 @@
-import { Button, List, ListItem, TextField, Typography } from '@mui/material';
+import { Button, List, ListItem, TextField, Typography, Box } from '@mui/material';
 import axios from 'axios';
 import jsCookie from 'js-cookie';
 import dynamic from 'next/dynamic';
@@ -56,6 +56,7 @@ function ProfileScreen() {
   };
   return (
     <Layout title="Profile">
+        <Box mb={75}>
       <Typography component="h3" variant="h3">
         Profile
       </Typography>
@@ -186,6 +187,7 @@ function ProfileScreen() {
           </ListItem>
         </List>
       </Form>
+      </Box>
     </Layout>
   );
 }

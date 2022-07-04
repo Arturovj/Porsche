@@ -32,11 +32,14 @@ export default function PorschePanamera() {
         {
             id: 1,
             name: 'Panamera',
-            colors: ['#efefef', '#000000', '#3c3c32'],
+            colors: ['#efefef', '#000000', '#3c3c32', '#502b3a','#00194b', '#d34624'],
             checkImg: {
               '#efefef': true,
               '#000000': false,
               '#3c3c32': false,
+              '#502b3a': false,
+                '#00194b': false,
+                '#d34624': false,
             },
         
             linkImg: {
@@ -47,6 +50,10 @@ export default function PorschePanamera() {
                 '/img/panamerablack.jpeg',
         
               '#3c3c32': '/img/panameragreen.jpeg',
+
+              '#502b3a': '/img/panamerabrown.jpeg',
+              '#00194b': '/img/panamerablue.jpeg',
+                '#d34624': '/img/panameraorange.jpeg',
             },
           },
        ]
@@ -161,9 +168,16 @@ export default function PorschePanamera() {
         
       </motion.p>
 
-        <div>
+      <motion.div
+        initial={"offscreen"}
+        whileInView={"onscreen"}
+        viewport={{ once: false, amount: 0.5 }}
+        transition={{ staggerChildren: 5 }}
+        variants={imageAnimate}
+      >
+        <div >
         {cars.map((car) => (
-            <div key={car.id} className="cart">
+            <div key={car.id} className={styles.colorsContainer}>
               {/* Render ImG  */}
               {/* If Checkimg property true => render img with that property
                */}
@@ -178,12 +192,15 @@ export default function PorschePanamera() {
                         width={720}
                         height={480}
                     />
+                   
                   );
                 } else {
                   return null;
                 }
               })}
-              <div className="colors d-flex">
+              <Box ml={5}>
+             <h4><p>{car.name} Exterior Colors</p></h4> 
+              <div className={styles.colors}>
                 {car.colors.map((color) => (
                   <p
                     key={color}
@@ -200,12 +217,13 @@ export default function PorschePanamera() {
                   ></p>
                 ))}
               </div>
-              <p>{car.name}</p>
+              </Box>
+              
             </div>
           ))}
           
         </div>
-
+        </motion.div>
     </Box>
   </Layout>
   )

@@ -37,3 +37,17 @@
 .container911{
     position: relative;
 }
+
+.bigImg{
+    width: 100%;
+    height: 100%;
+    max-height: 400px;
+}
+
+.colorsContainer{
+    display: flex;
+}
+
+.colors{
+    display: flex;
+}

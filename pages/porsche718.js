@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Layout from "../components/Layout";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -23,7 +23,64 @@ const textAnimate = {
   },
 };
 
-export default function porsche718() {
+export default function Porsche718() {
+
+    const p718Data = [
+        {
+            id: 1,
+            name: '718',
+            colors: ['#efefef', '#000000', '#3c9343', '#3c3c32','#00194b', '#ffcc00'],
+            checkImg: {
+              '#efefef': true,
+              '#000000': false,
+              '#3c9343': false,
+              '#3c3c32': false,
+                '#00194b': false,
+                '#ffcc00': false,
+            },
+        
+            linkImg: {
+              '#efefef':
+                '/img/718white.jpeg',
+        
+              '#000000':
+                '/img/718black.jpeg',
+        
+              '#3c9343': '/img/728green.jpeg',
+    
+              '#3c3c32': '/img/718brown.jpeg',
+              '#00194b': '/img/718blue.jpeg',
+                '#ffcc00': '/img/718yellow.jpeg',
+            },
+          },
+       ]
+    
+    const [ cars, setCars ] = useState(p718Data);
+    
+    
+    const handleChooseColor = (id, color) => {
+    setCars((prev) => {
+        return prev.map(car => {
+            if(car.id === id) {
+                let newCheckImg = {};
+                Object.keys(car.checkImg).map((item) => {
+                    car.checkImg[item] = false;
+                    newCheckImg = {...car.checkImg, [color]: true};
+                    return null;
+                })
+                return {...car, checkImg: newCheckImg};
+            } else {
+                return car;
+            }
+    })
+    })
+    }
+    
+
+
+
+
+
   return (
     <Layout>
     <Box mt={2}>
@@ -111,6 +168,62 @@ export default function porsche718() {
       >
         
       </motion.p>
+      <motion.div
+        initial={"offscreen"}
+        whileInView={"onscreen"}
+        viewport={{ once: false, amount: 0.5 }}
+        transition={{ staggerChildren: 5 }}
+        variants={imageAnimate}
+      >
+        <div >
+        {cars.map((car) => (
+            <div key={car.id} className={styles.colorsContainer}>
+              {/* Render ImG  */}
+              {/* If Checkimg property true => render img with that property
+               */}
+              {Object.keys(car.checkImg).map((item) => {
+                if (car.checkImg[item]) {
+                  return (
+                    <Image
+                      key={item}
+                      src={car.linkImg[item]}
+                      alt={car.name}
+                      className="img"
+                        width={720}
+                        height={480}
+                    />
+                   
+                  );
+                } else {
+                  return null;
+                }
+              })}
+              <Box ml={5}>
+             <h4><p>{car.name} Exterior Colors</p></h4> 
+              <div className={styles.colors}>
+                {car.colors.map((color) => (
+                  <p
+                    key={color}
+                    className={` ${car.checkImg[color] && 'active'}   `}
+                    style={{
+                      backgroundColor: color,
+                      width: 40,
+                      height: 40,
+                      borderRadius: '50%',
+                      marginRight: 10,
+                      cursor: 'pointer',
+                    }}
+                    onClick={() => handleChooseColor(car.id, color)}
+                  ></p>
+                ))}
+              </div>
+              </Box>
+              
+            </div>
+          ))}
+          
+        </div>
+        </motion.div>
     </Box>
   </Layout>
   )

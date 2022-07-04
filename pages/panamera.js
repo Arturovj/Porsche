@@ -120,6 +120,7 @@ export default function PorschePanamera() {
           alt="Porsche 911"
           width={1280}
           height={720}
+          className={styles.image}
         />
          
       
@@ -153,6 +154,7 @@ export default function PorschePanamera() {
           variants={imageAnimate}
         >
           <Image
+          className={styles.image}
             src="/img/panamerapage2.jpeg"
             alt="Porsche 911"
             width={720}
@@ -188,7 +190,7 @@ export default function PorschePanamera() {
                       key={item}
                       src={car.linkImg[item]}
                       alt={car.name}
-                      className="img"
+                      className={styles.image}
                         width={720}
                         height={480}
                     />

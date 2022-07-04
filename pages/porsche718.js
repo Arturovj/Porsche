@@ -117,6 +117,7 @@ export default function Porsche718() {
           </div>
         </motion.p>
         <Image
+            className={styles.image}
           src="/img/718page1.jpg"
           alt="Porsche 911"
           width={1280}
@@ -154,6 +155,7 @@ export default function Porsche718() {
           variants={imageAnimate}
         >
           <Image
+          className={styles.image}
             src="/img/718page2.jpg"
             alt="Porsche 911"
             width={720}
@@ -185,10 +187,11 @@ export default function Porsche718() {
                 if (car.checkImg[item]) {
                   return (
                     <Image
+                    className={styles.image}
                       key={item}
                       src={car.linkImg[item]}
                       alt={car.name}
-                      className="img"
+                      
                         width={720}
                         height={480}
                     />

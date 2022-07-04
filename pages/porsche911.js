@@ -119,6 +119,7 @@ setCars((prev) => {
             alt="Porsche 911"
             width={1280}
             height={720}
+            className={styles.image}
           />
            
         
@@ -156,6 +157,7 @@ setCars((prev) => {
               alt="Porsche 911"
               width={720}
               height={480}
+              className={styles.image}
             />
           </motion.div>
         </div>
@@ -186,7 +188,7 @@ setCars((prev) => {
                       key={item}
                       src={car.linkImg[item]}
                       alt={car.name}
-                      className="img"
+                      className={styles.image}
                         width={720}
                         height={480}
                     />

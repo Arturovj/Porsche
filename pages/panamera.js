@@ -32,21 +32,21 @@ export default function porschePanamera() {
         {
             id: 1,
             name: 'Panamera',
-            colors: ['#A1E52C', '#01B8E5', '#C92C49'],
+            colors: ['#efefef', '#000000', '#3c3c32'],
             checkImg: {
-              '#A1E52C': true,
-              '#01B8E5': false,
-              '#C92C49': false,
+              '#efefef': true,
+              '#000000': false,
+              '#3c3c32': false,
             },
         
             linkImg: {
-              '#A1E52C':
+              '#efefef':
                 '/img/panamerawhite.jpeg',
         
-              '#01B8E5':
+              '#000000':
                 '/img/panamerablack.jpeg',
         
-              '#C92C49': '/img/panameragreen.jpeg',
+              '#3c3c32': '/img/panameragreen.jpeg',
             },
           },
        ]

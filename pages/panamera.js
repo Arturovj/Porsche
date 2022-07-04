@@ -41,12 +41,12 @@ export default function porschePanamera() {
         
             linkImg: {
               '#A1E52C':
-                '/img/panamerareal.jpg',
+                '/img/panamerawhite.jpeg',
         
               '#01B8E5':
-                '/img/718real.jpg',
+                '/img/panamerablack.jpeg',
         
-              '#C92C49': '/img/real911.jpg',
+              '#C92C49': '/img/panameragreen.jpeg',
             },
           },
        ]

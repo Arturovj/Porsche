@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Layout from "../components/Layout";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -23,7 +23,57 @@ const textAnimate = {
   },
 };
 
+
+
+
+
 export default function porschePanamera() {
+    const panameraData = [
+        {
+            id: 1,
+            name: 'Panamera',
+            colors: ['#A1E52C', '#01B8E5', '#C92C49'],
+            checkImg: {
+              '#A1E52C': true,
+              '#01B8E5': false,
+              '#C92C49': false,
+            },
+        
+            linkImg: {
+              '#A1E52C':
+                '/img/panamerareal.jpg',
+        
+              '#01B8E5':
+                '/img/718real.jpg',
+        
+              '#C92C49': '/img/real911.jpg',
+            },
+          },
+       ]
+
+  const [ cars, setCars ] = useState(panameraData);
+
+
+
+  const handleChooseColor = (id, color) => {
+    setCars((prev) => {
+        return prev.map(car => {
+            if(car.id === id) {
+                let newCheckImg = {};
+                Object.keys(car.checkImg).map((item) => {
+                    car.checkImg[item] = false;
+                    newCheckImg = {...car.checkImg, [color]: true};
+                    return null;
+                })
+                return {...car, checkImg: newCheckImg};
+            } else {
+                return car;
+            }
+    })
+    })
+  }
+
+
   return (
     <Layout>
     <Box mt={2}>
@@ -111,6 +161,52 @@ export default function porschePanamera() {
       >
         
       </motion.p>
+
+        <div>
+        {cars.map((car) => (
+            <div key={car.id} className="cart">
+              {/* Render ImG  */}
+              {/* If Checkimg property true => render img with that property
+               */}
+              {Object.keys(car.checkImg).map((item) => {
+                if (car.checkImg[item]) {
+                  return (
+                    <Image
+                      key={item}
+                      src={car.linkImg[item]}
+                      alt={car.name}
+                      className="img"
+                        width={720}
+                        height={480}
+                    />
+                  );
+                } else {
+                  return null;
+                }
+              })}
+              <div className="colors d-flex">
+                {car.colors.map((color) => (
+                  <p
+                    key={color}
+                    className={` ${car.checkImg[color] && 'active'}   `}
+                    style={{
+                      backgroundColor: color,
+                      width: 40,
+                      height: 40,
+                      borderRadius: '50%',
+                      marginRight: 10,
+                      cursor: 'pointer',
+                    }}
+                    onClick={() => handleChooseColor(car.id, color)}
+                  ></p>
+                ))}
+              </div>
+              <p>{car.name}</p>
+            </div>
+          ))}
+          
+        </div>
+
     </Box>
   </Layout>
   )

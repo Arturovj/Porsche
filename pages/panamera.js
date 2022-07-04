@@ -27,7 +27,7 @@ const textAnimate = {
 
 
 
-export default function porschePanamera() {
+export default function PorschePanamera() {
     const panameraData = [
         {
             id: 1,
@@ -52,7 +52,6 @@ export default function porschePanamera() {
        ]
 
   const [ cars, setCars ] = useState(panameraData);
-
 
 
   const handleChooseColor = (id, color) => {
